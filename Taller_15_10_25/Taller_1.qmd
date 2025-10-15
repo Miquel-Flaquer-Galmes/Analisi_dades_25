@@ -1,5 +1,82 @@
 ---
-title: "Taller_1"
-format: html
+title: "Taller evaluado I"
+date: "2025-10-15"
+format:
+  html:
+    toc: true
+    toc-depth: 4
+lang: es
 ---
+
+**Nombre y apellido de cada miembro del grupo**
+
+-   Estudiante 1 Marc Sanchez Verchili
+-   Estudiante 2 Miquel Flaquer Glames
+-   Estudiante 3 Mateu Prats Munar
+
+::: {.callout-important title="Artículo a revisar"}
+**PLOS ONE (3 de septiembre de 2025)** — *Smartphone use on the toilet and the risk of hemorrhoids*\
+[Enlace al artículo](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0329983) — DOI: 10.1371/journal.pone.0329983\
+**Datos abiertos:** Harvard Dataverse (DOI: 10.7910/DVN/HUXLUM)
+:::
+
+<!-- Citas de contexto: artículo, fecha de publicación y dataset abierto. -->
+
+#### 1. ¿Cuál es la pregunta de investigación o hipótesis principal? (1 punto)
+
+Existe una relacion entre el uso de telefonos moviles mientras se esta en el inodoro y la prevalencia de hemorroides en adultos?
+
+#### 2. Definid: población objetivo, población muestreada, unidad de observación, muestra y tipo de muestreo (2 puntos)
+
+Poblacion objetivo: Toda la poblacion en general que tenga acceso a un inodoro.
+
+Poblacion muestreada: Todos aquellos que formaron parte del estudio transversal de pacientes adultos que se sometieron a una colonoscopia de detección en el Centro Médico Beth Israel Deaconess entre dia 1/08/2024 y 15/12/2024.
+
+Muestra: Todos aquellos que completaron la encuesta, 125 adultos
+
+Unidad de observacion: Cada uno de los individuos que respondieron la encuesta.
+
+Tipo de muestreo: Oportunista
+
+#### 3. Identificad el tipo de estudio, justificad vuestra respuesta (1.5 puntos)
+
+Por una parte es análitico ya que quiere hacer una inferencia entre el uso del telefono y aparicion de hemorroides, por otro lado es observacional ya que no influye de manera directa o indirecta sobre el individuo. Por ultimo seria transversal ya que cogieron a todos aquellos que estaban dispuestos en ese momento a hacerse una colonoscopia,
+
+#### 4. Indicad al menos tres posibles sesgos y/o factores de confunción que podrían afectar los resultados del estudio (2 puntos)
+
+-   Mètodo no aleatorio, no podemos hacer inferencia en el estudio, sesgo de conveniencia, la mostra és sobre la gent que casualment va venir aquell dia.
+    -   Sesgo de voluntario, només varen fer l'estudi la gent que va voler.
+    -   La majoria de joves no es fan colonoscòpies, per tant a la mostra no és representativa de la població general.
+    -   Quan es demana el temps que s'utilitza el mòvil al lavabo el temps pot no ser correcte ja que no es te constància del temps usat. Ningú es coronometra el temps que utilitza el mòvil al vàter.
+
+#### 5. Con base en la Tabla 1 del artículo, interpretad en el contexto del problema las características que resultaron estadísticamente significativas (1.5 puntos)
+
+Segons la Taula 1 les característiques que estadísticament son significatives son:
+
+-   Les edats mitjanes de les persones que empren el mòbil i les que no ho fan dins el bany són diferents. Gràcies a un chi-square test podem assegurar que són diferents (p-value de 0.001)
+
+-   La mitjana d'activitat física minuts per setmana. Gràcies a un chi-square test podem assegurar que són diferents (p-value de 0.017)
+
+-   Llegir a part de l'ús dels telèfons mòbils.
+
+-   No llegir al bany.
+
+#### 6. Con base en la Figura 5, discutid si el gráfico empleado es correcto y proponed, en su caso, mejoras que faciliten la interpretación (1 punto)
+
+Por nuestra parte creemos que el uso del grafico es correcto dado que tenemos valores absolutos ya que cada uno tiene un numero, es decir, cuantos de ellos usan el telefono segun que herramienta(entretenimiento) aunque pensamos que tambien tendria sentidos hacer un grafico segun el tiempo medio de estar en el baño segun la actividad que se realiza
+
+#### 7. Explica, de forma breve y basada en esta evidencia, si recomendarías evitar o limitar el uso del smartphone en el inodoro a tus amigos (jóvenes menores de 25 años), indicando por qué, cómo (1 punto)
+
+Si leemos el estudio nos dice que, una vez ajustado por edad, la posibilidad de desarrollar hemorroides aumenta en un 47%. Por lo tanto, suponiendo que hay indivuos mostreados que tengan una edad similar a 25 o menos años podemos inferir que aumenta también un 47% lo cual es bastante significativo. Asi pues,podria recomendaria evitar el uso o limitarlo a un tiempo considerable que le permita equipararse con aquellos que no lo utilizan. Por otro lado, tenemos que es una muestra de 125 personas y la media de edad de los que utilizan el movil es de 55 años, asi que tenemos que seguramente no tengamos suficiente individuos jovenes como para considerar que es una estimacion suficiente como para creer que hay realmente una relacion. Aun así seguiria recomendado evitar el uso, ya que a la larga se llegaria a la edad estimada para poder formalizar la relacion
+
+<br>
+
+**Instrucciones para entregar:** Un miembro del grupo deberá subir a la tarea de Aula Digital un único archivo PDF que incluya:\
+1) los nombres de todos los integrantes, y\
+2) un enlace al repositorio de GitHub (de cualquiera de los integrantes).
+
+El repositorio deberá contener, como mínimo:\
+- el archivo fuente `.qmd`,\
+- la salida `.html`, y\
+- un `README.md` que describa con claridad el propósito del proyecto y su estructura.
 
