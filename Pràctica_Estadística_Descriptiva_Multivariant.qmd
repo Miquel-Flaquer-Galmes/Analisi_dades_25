@@ -1,0 +1,94 @@
+---
+title: "Exercici_estadística_descriptiva_multivariant"
+format: html
+editor: visual
+---
+
+---
+title: "Ejercicios de Estadística descriptiva multivariante"
+format:
+  html:
+    theme: lumen
+    toc: true
+---
+
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
+library(GGally)
+library(tidyverse)
+```
+
+## Ejercicio 
+
+Una empresa quiere analizar si existe relación entre las ventas de sus productos, la inversión en publicidad y la satisfacción del cliente. Los datos que corresponden a las ventas en miles de unidades, el gasto en publicidad en miles de euros y la puntuación de satisfacción del cliente en una escala de 1 a 10 para 15 productos, los puedes descargar en el siguiente enlace:  [datos empresa](https://github.com/igmuib/Practica_AD/blob/main/datos_empresa.csv)
+
+Leemos los datos
+
+```{r, message=FALSE}
+ruta<- "C:/Users/Usuario/Downloads/datos_empresa.csv"
+datos_empresa <- read.csv(ruta)
+library(tidyverse)
+glimpse(datos_empresa)
+```
+
+### Apartado a
+Calcula, por un lado con formulación matricial y, por otro, mediante instrucciones en R/tidyverse, el vector de medias y la matriz de covarianzas para las variables cuantitativas del conjunto datos_empresa. A continuación, interpreta los resultados en el contexto del problema. 
+
+#### Respuesta
+
+### Apartado b
+Calcula, por un lado con formulación matricial y, por otro, mediante instrucciones en R/tidyverse la matriz de correlaciones. Presenta una visualización de ella con la librería `GGally`y la función `ggpairs()`.  Interpreta el resultado en el contexto del problema.
+
+
+### Respuesta
+
+### Apartado c
+Define una variable compuesta $Y=Xa$ que agregue Ventas, Publicidad y Satisfaccion_cliente mediante un vector de pesos $a$ justificados con criterio empresarial, por ejemplo, un índice de rendimiento que priorice Ventas, o un índice de intensidad de marketing que dé mayor peso a Publicidad. Calcula por formulación matricial su vector de medias y matriz de covarianzas muestra, interpreta lo obtenido en el contexto del problema.
+
+#### Respuesta
+
+### Apartado d 
+Usa el teorema de la dimensión para ofrecer una breve interpretación sobre la redundancia y la dispersión de `datos_empresa`.
+
+#### Respuesta
+
+
+### Apartado e 
+Para estos datos calcula la varianza total y la varianza generalizada y explica qué mide cada una. Comenta cómo cambian si aumentan las correlaciones entre las variables o si se reescala alguna variable.
+
+#### Respuesta
+
+
+
+```{r}
+library(tidyverse)
+
+Dades_num = datos_empresa %>% select(Ventas, Publicidad, Satisfaccion_cliente) %>% as.matrix()
+
+
+Matr_cov = cov(Dades_num)
+
+
+var_total = sum(diag(Matr_cov)) # traça
+
+
+var_generalitzada = det(Matr_cov) # producte de valors propis = determinant de la matriu
+
+var_total
+var_generalitzada
+
+```
+
+Notem que la variança total és la traça de la matriu de covariances. És a dir la suma de les variances de cada variable. Llavors fa referència a com de molt o poc varien les variables. En aquest cas, és de 824.729 llavors podem concluir que hi ha molta dispersió a les columnes de la matriu de dades mirades de forma independent.
+
+En canvi la variança generalitzada és el determinant de la matriu de covariances. Llavors que sigui petita implica que hi ha bastanta relació entre les variables.
+
+
+Si augmenten les correlacions entre les variables no influeix a la suma de les variances. Llavors, la traça roman invariant, és a dir la variança total no varia. En canvi a l'estar més correlacionades el determinant disminuirà.
+
+Al reescalar una variable, estam multiplicant per un factor, llavors tant la variança total com la generalitzada és veuen alterades. En el cas de la variança total recordem el resultat de probabilitat que ens diu que Var(aX) = a^2Var(X). Aleshores podem assegurar que la diferència serà de (a^2-1)Var(X). En canvi per la variança generalitzada notem que la correlació entre dues variables aleatòries aX i Y és: E(aXY)-E(aX)E(Y) = a(E(XY)-E(X)E(Y)). Aleshores podem assegurar que estam multiplicant una fila i una columna de la matriu de covariances per el factor a. Per tant, per propietats de determinants, tenim que la variança generalitzada després de fer la reescala és a^2*(variança generalitzada anterior).
+
+
+### Apartado f
+Selecciona la medida de distancia más adecuada para identificar qué observaciones multivariantes son similares y cuáles no.
+
+#### Respuesta
