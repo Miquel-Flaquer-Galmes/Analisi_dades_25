@@ -202,6 +202,7 @@ La matriz total es $T = B + W$.
 
 ### a.Formula las hipótesis para contrastar si los niveles medios conjuntos de $(\text{NO}_2,\ \text{PM}_{2.5})$ son iguales en las tres zonas T, I y R
 
+<<<<<<< HEAD
 Hem de emplear una comparació de mitjanes, en un principi en aquestos casos ens demanen que totes les variables segueixes una normal multivariant on comparteixen la matriu de covarianzes. En el nostre cas el propi exercisi ja ens diu que aixo se satisfa. Es a dir totes son normal bivariant i tenen $\Sigma$ com a matriu de covariances, per tant podem garantir ses hipotesis.
 Vist això, podrem realitzar la comparació de mitjanes, on la nostra hipotesi nula sera $H_0\colon \space \mu_T = \mu_R = \mu_I$ i la hipotesi alternativa $H_1 \colon \space \exists i,j \in \{T,I,R\} | \space\mu_i \neq \mu_j, i\neq j$ . Doncs si suposam que la hipotesi nul·la es certa tindrem que la nostra $B \sim W_2(\Sigma,3)$ $W \sim W_2(\Sigma,27)$ y $T \sim W_2(\Sigma, 29)$ on $B$ Y $W$ sin estocasticament independets i per tnat podemos garantir que seguira una distribucio de wilks. $\frac{\lvert W \rvert}{\lvert W+B\rvert} \sim\Lambda (2, 27, 29)$ i rebutjarem Ho si $\Lambda$ valor petit i significatiu.
 
@@ -210,6 +211,10 @@ Vist això, podrem realitzar la comparació de mitjanes, on la nostra hipotesi n
 Com hem mencionat a l'apartat anterior volem fer un contrast de mitjanes. Sabem que a n'aquests casos l'estadístic de raó de versemblança ve donat per $-n\operatorname{log}(\Lambda)$ sent $\Lambda$ la lambda de Wilks aquesta distribució sent la hipòtesi nul·la certa ha de seguir una distribució 
 $\chi^2$ amb $p(g-1)$ graus de llibertat. On p és el nombre variables i g el nombre de possibles vectors de mitjanes. En aquest problema p = 2 i g = 3.
 
+=======
+### b. Escribe el estadístico razón de verosimilitudes
+
+>>>>>>> 75bb1933f3355ff53dd679476b3199387c04ca04
 ### c. Para un nivel de significación $\alpha = 0{,}05$, plantea la regla de decisión del contraste utilizando la distribución $\chi^2$ con $p(g-1)$ grados de libertad, e indica si se debe rechazar o no $H_0$.
 
 Notem que estadísticament tenim un n relativament gran, $n = n_1 + n_2 + n_3 = 10+8+12=30$. Sabem que $-n\operatorname{log}(\Lambda)$ segueix de manera asimptòtica una distribució $\chi^2$ amb $p(g-1)$ graus de llibertat. Sent $\Lambda$ la lambda de Wilks definida per:
